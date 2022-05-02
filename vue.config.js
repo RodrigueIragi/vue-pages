@@ -4,5 +4,7 @@ module.exports = defineConfig({
 })
 
 module.exports = {
-  publicPath: '/vue-pages/'
+  publicPath: process.env.NODE_ENV === 'production'
+  ? '/vue-pages/'
+  : '/'
 }
